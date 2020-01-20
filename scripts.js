@@ -9,3 +9,4 @@ $("input.box").change(function() {
         path: '/',
         expires: 365
     });
+});
