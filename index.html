@@ -2,20 +2,8 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="siteStyle.css">
-    <script type="text/javascript">
-      $("input.box").each(function() {
-    var mycookie = $.cookie($(this).attr('name'));
-    if (mycookie && mycookie == "true") {
-        $(this).prop('checked', mycookie);
-    }
-});
-$("input.box").change(function() {
-    $.cookie($(this).attr("name"), $(this).prop('checked'), {
-        path: '/',
-        expires: 365
-    });
-});
-    </script>
+    <script src="scripts.js"></script>
+
 </head>
 
 <body>
@@ -23,47 +11,47 @@ $("input.box").change(function() {
   <h1>ToDo List</h1>
   
   <label class="container">Share a tequila bottle
-  <input type="checkbox" name="1">
+  <input class="box" type="checkbox" name="1">
   <span class="checkmark"></span>
 </label>
 
 <label class="container">Laser Tag dar in aceeasi echipa
-  <input type="checkbox" name="2">
+  <input class="box" type="checkbox" name="2">
   <span class="checkmark"></span>
 </label>
 
 <label class="container">Gradina botanica Cluj
-  <input type="checkbox" name="3">
+  <input class="box" type="checkbox" name="3">
   <span class="checkmark"></span>
 </label>
 
 <label class="container">Reading stuff under a tree
-  <input type="checkbox" name="4">
+  <input class="box" type="checkbox" name="4">
   <span class="checkmark"></span>
 </label>
 
 <label class="container">Drinking hot choco while watching a tv show
-  <input type="checkbox" name="5">
+  <input class="box" type="checkbox" name="5">
   <span class="checkmark"></span>
 </label>
 
 <label class="container">Buy a traditional japanese house
-  <input type="checkbox" name="6">
+  <input class="box" type="checkbox" name="6">
   <span class="checkmark"></span>
 </label>
 
 <label class="container">Patinoar 
-  <input type="checkbox" name="7">
+  <input class="box" type="checkbox" name="7">
   <span class="checkmark"></span>
 </label>
 
 <label class="container">Sushi all you can eat
-  <input type="checkbox" name="8">
+  <input class="box" type="checkbox" name="8">
   <span class="checkmark"></span>
 </label>
 
 <label class="container">Locul cu ceai japonez
-  <input type="checkbox" name="9">
+  <input class="box" type="checkbox" name="9">
   <span class="checkmark"></span>
 </label>
 
