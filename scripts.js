@@ -4,11 +4,11 @@ $('.box').on('click', function() {
     fav = {id: $(this).attr('id'), value: $(this).prop('checked')};
     favs.push(fav);
   });
-  localStorage.setItem("list", JSON.stringify(favs));
+  localStorage.setItem("favorites", JSON.stringify(favs));
 });
 
 $(document).ready(function() {
-  var favorites = JSON.parse(localStorage.getItem('list'));
+  var favorites = JSON.parse(localStorage.getItem('favorites'));
   if (!favorites.length) {return};
   console.debug(favorites);
 
