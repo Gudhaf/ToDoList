@@ -1,4 +1,19 @@
-//on page load set the checkbox to stored value or default to true
-$('#box').prop('checked' , ( typeof localStorage.turbo !== 'undefined' ) ? (localStorage.turbo=='true') : true ); 
-//when checkbox is updated, update stored value
-$('#box').change( function() { localStorage.turbo = $(this).prop('checked');  }); 
+$('.box').on('click', function() {
+  var fav, favs = [];
+  $('.box').each(function() { // run through each of the checkboxes
+    fav = {id: $(this).attr('id'), value: $(this).prop('checked')};
+    favs.push(fav);
+  });
+  localStorage.setItem("list", JSON.stringify(favs));
+});
+
+$(document).ready(function() {
+  var favorites = JSON.parse(localStorage.getItem('list'));
+  if (!favorites.length) {return};
+  console.debug(favorites);
+
+  for (var i=0; i<favorites.length; i++) {
+    console.debug(favorites[i].value == 'on');
+    $('#' + favorites[i].id ).prop('checked', favorites[i].value);
+  }
+});
